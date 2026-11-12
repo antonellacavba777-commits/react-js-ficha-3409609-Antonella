@@ -95,3 +95,20 @@ const productos = [
 
 console.log("Total de productos registrados:", productos.length);
 console.log("Primer producto:", productos[0].nombre);
+
+
+console.log("\n==========================================");
+console.log("             RETO 5: MAP()                ");
+console.log("==========================================");
+
+// 1. Precios con IVA (precio × 1.19)
+const preciosConIva = productos.map(producto => producto.precio * 1.19);
+console.log("Precios con IVA:", preciosConIva);
+
+// 2. Nombres en mayúscula
+const nombresMayuscula = productos.map(producto => producto.nombre.toUpperCase());
+console.log("Nombres en mayúscula:", nombresMayuscula);
+
+// 3. Resumen de productos en texto
+const resumenProductos = productos.map(producto => `${producto.nombre} cuesta $${producto.precio}`);
+console.log("Resumen de productos:", resumenProductos);
