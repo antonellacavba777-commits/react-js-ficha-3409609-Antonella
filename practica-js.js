@@ -189,7 +189,7 @@ console.log("Valor total del inventario: $" + valorInventario);
 
 
 console.log("\n==========================================");
-console.log("       RETO 8:                    ");
+console.log("       RETO 8: JAVASCRIPT MODERNO         ");
 
 
 // 12.1 Template literals
