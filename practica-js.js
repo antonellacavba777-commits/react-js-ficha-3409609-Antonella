@@ -155,7 +155,9 @@ const producto5 = productos.find(producto => producto.id === 5);
 console.log("Producto con id 5:", producto5);
 
 // 5. Crear una función buscarProducto(id) que use find() y retorne el producto
-const buscarProducto = id => productos.find(producto => producto.id === id);
+function buscarProducto(id) {
+  return productos.find(producto => producto.id === id);
+}
 console.log("Buscar producto con id 8:", buscarProducto(8));
 
 

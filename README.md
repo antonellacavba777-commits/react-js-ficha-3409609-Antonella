@@ -5,8 +5,9 @@ Aplicación web desarrollada con **React** y **Vite** como parte de la formació
 ## Funcionalidades principales
 
 - **Renderizado dinámico:** Listado de productos mediante `.map()` utilizando el componente reutilizable `ProductoCard`.
-- **Filtrado de inventario:** Cálculo de productos disponibles con stock activo usando `.filter()`.
-- **Cálculo de inventario:** Suma del valor total del inventario disponible mediante `.reduce()`.
+- **Filtrado de inventario:** Muestra todos los productos y, en una segunda sección, solo los que tienen stock usando `.filter()`.
+- **Estado y valor del inventario:** Indica si hay productos agotados con `.some()` y calcula el valor total del inventario con `.reduce()`.
+- **Búsqueda por identificador:** `buscarProducto(id)` localiza un producto mediante `.find()` en `practica-js.js`.
 - **Interfaz responsiva:** Diseño en cuadrícula con CSS Grid, tipografía limpia y efectos visuales al pasar el cursor.
 
 ## Tecnologías utilizadas

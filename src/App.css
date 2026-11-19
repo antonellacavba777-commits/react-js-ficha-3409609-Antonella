@@ -23,6 +23,16 @@ body {
   letter-spacing: -0.02em;
 }
 
+.contenedor section {
+  margin-top: 32px;
+}
+
+.contenedor section h2 {
+  margin: 0 0 16px;
+  color: #111827;
+  font-size: 1.4rem;
+}
+
 /* Resumen superior (disponibles e inventario) */
 .contenedor > p {
   display: inline-block;
