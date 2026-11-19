@@ -1,16 +1,35 @@
-# React + Vite
+# Tienda React - Taller JavaScript aplicado a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web desarrollada con **React** y **Vite** como parte de la formación en **Análisis y Desarrollo de Software (ADSO) — Ficha 3409609 (SENA)**.
 
-Currently, two official plugins are available:
+## Funcionalidades principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Renderizado dinámico:** Listado de productos mediante `.map()` utilizando el componente reutilizable `ProductoCard`.
+- **Filtrado de inventario:** Cálculo de productos disponibles con stock activo usando `.filter()`.
+- **Cálculo de inventario:** Suma del valor total del inventario disponible mediante `.reduce()`.
+- **Interfaz responsiva:** Diseño en cuadrícula con CSS Grid, tipografía limpia y efectos visuales al pasar el cursor.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React**
+- **Vite**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **Git y GitHub**
 
-## Expanding the Oxlint configuration
+## Estructura del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+tienda-react/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── ProductoCard.jsx
+│   ├── data/
+│   │   └── productos.js
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
