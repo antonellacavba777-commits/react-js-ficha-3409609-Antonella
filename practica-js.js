@@ -97,9 +97,18 @@ console.log("Total de productos registrados:", productos.length);
 console.log("Primer producto:", productos[0].nombre);
 
 
+
 console.log("\n==========================================");
-console.log("             RETO 5: MAP()                ");
-console.log("==========================================");
+console.log("             RETO 4          ");
+
+
+productos.forEach((producto, indice) => {
+  console.log(`${indice + 1}. ${producto.nombre} - $${producto.precio} - stock: ${producto.stock}`);
+});
+
+console.log("\n==========================================");
+console.log("             RETO 5               ");
+
 
 // 1. Precios con IVA (precio × 1.19)
 const preciosConIva = productos.map(producto => producto.precio * 1.19);
@@ -112,3 +121,42 @@ console.log("Nombres en mayúscula:", nombresMayuscula);
 // 3. Resumen de productos en texto
 const resumenProductos = productos.map(producto => `${producto.nombre} cuesta $${producto.precio}`);
 console.log("Resumen de productos:", resumenProductos);
+
+
+console.log("\n==========================================");
+console.log("             RETO 6                 ");
+
+
+
+
+// Ejemplos base del taller
+const disponibles = productos.filter(producto => producto.stock > 0);
+console.log("Productos disponibles (stock > 0):", disponibles);
+
+const producto3 = productos.find(producto => producto.id === 3);
+console.log("Producto con id 3:", producto3);
+
+// 1. Filtrar productos con precio mayor a $100.000
+const mayoresA100Mil = productos.filter(producto => producto.precio > 100000);
+console.log("Precio mayor a $100.000:", mayoresA100Mil);
+
+// 2. Filtrar productos con precio entre $50.000 y $200.000
+const entre50MilY200Mil = productos.filter(
+  producto => producto.precio >= 50000 && producto.precio <= 200000
+);
+console.log("Precio entre $50.000 y $200.000:", entre50MilY200Mil);
+
+// 3. Filtrar únicamente una categoría escogida por ti (ej. 'Perifericos')
+const perifericos = productos.filter(producto => producto.categoria === 'Perifericos');
+console.log("Categoría Perifericos:", perifericos);
+
+// 4. Buscar el producto con id 5
+const producto5 = productos.find(producto => producto.id === 5);
+console.log("Producto con id 5:", producto5);
+
+// 5. Crear una función buscarProducto(id) que use find() y retorne el producto
+const buscarProducto = id => productos.find(producto => producto.id === id);
+console.log("Buscar producto con id 8:", buscarProducto(8));
+
+
+
