@@ -159,4 +159,28 @@ const buscarProducto = id => productos.find(producto => producto.id === id);
 console.log("Buscar producto con id 8:", buscarProducto(8));
 
 
+console.log("\n==========================================");
+console.log("               RETO 7:         ");
 
+// 1. ¿Existe algún producto agotado?
+const hayAgotados = productos.some(producto => producto.stock === 0);
+console.log("¿Existe algún producto agotado?:", hayAgotados);
+
+// 2. ¿Existe algún producto con precio mayor a $1.000.000?
+const mayorAUnMillon = productos.some(producto => producto.precio > 1000000);
+console.log("¿Existe algún producto con precio mayor a $1.000.000?:", mayorAUnMillon);
+
+// 3. ¿Todos los productos tienen precio mayor que cero?
+const preciosValidos = productos.every(producto => producto.precio > 0);
+console.log("¿Todos los productos tienen precio mayor que cero?:", preciosValidos);
+
+// 4. ¿Todos los productos tienen stock mayor o igual que cero?
+const stockValido = productos.every(producto => producto.stock >= 0);
+console.log("¿Todos los productos tienen stock mayor o igual que cero?:", stockValido);
+
+// 5. Calcular el valor total del inventario
+const valorInventario = productos.reduce(
+  (total, producto) => total + producto.precio * producto.stock,
+  0
+);
+console.log("Valor total del inventario: $" + valorInventario);
