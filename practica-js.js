@@ -184,3 +184,45 @@ const valorInventario = productos.reduce(
   0
 );
 console.log("Valor total del inventario: $" + valorInventario);
+
+
+
+
+console.log("\n==========================================");
+console.log("       RETO 8:                    ");
+
+
+// 12.1 Template literals
+console.log(`El producto ${productos[0].nombre} cuesta $${productos[0].precio}`);
+
+// 12.2 Desestructuración
+const { nombre, precio, stock } = productos[0];
+console.log("Desestructurado:", nombre, precio, stock);
+
+// 12.3 Spread (copia actualizando stock de productos[0])
+const productoActualizado = {
+  ...productos[0],
+  stock: 8
+};
+console.log("Producto original [0]:", productos[0]);
+console.log("Producto actualizado [0]:", productoActualizado);
+
+// 12.4 Operador ternario
+const estado = productoActualizado.stock > 0 ? 'Disponible' : 'Agotado';
+console.log("Estado:", estado);
+
+// --- TAREA ---
+// Copia del producto en índice 1 ('Teclado', que tenía stock: 0 y precio: 90000)
+const tecladoModificado = {
+  ...productos[1],
+  precio: 115000,
+  stock: 6
+};
+
+const estadoTeclado = tecladoModificado.stock > 0 ? 'Disponible' : 'Agotado';
+console.log(
+  `Producto: ${tecladoModificado.nombre} | Precio: $${tecladoModificado.precio} | Estado: ${estadoTeclado}`
+);
+
+// Comprobación: el objeto original en productos[1] no cambió
+console.log("Original productos[1] intacto:", productos[1]);
